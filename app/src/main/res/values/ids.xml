@@ -2,4 +2,6 @@
 <resources>
     <item name="back" type="id" />
     <item name="bookNow" type="id" />
+    <item name="register" type="id" />
+    <item name="login" type="id" />
 </resources>
