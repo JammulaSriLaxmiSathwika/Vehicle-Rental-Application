@@ -1,4 +1,4 @@
-package com.example.finalandroidproject;
+package com.example.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,7 +27,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the UserViewActivity
-                Intent intent = new Intent(RegistrationActivity.this, UserViewActivity.class);
+                Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
