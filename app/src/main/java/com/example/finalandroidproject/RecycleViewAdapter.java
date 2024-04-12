@@ -16,11 +16,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+import java.util.Random;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.MyViewHolder> {
     List<Cars> carsList;
     Button btn_book;
     Context context;
+    private int[] carImages = {
+            R.drawable.accord1,
+            R.drawable.city1,
+            R.drawable.civic1,
+            R.drawable.elantra1,
+            R.drawable.passat1,
+            R.drawable.rapid1,
+            R.drawable.rent,
+            R.drawable.seltos1,
+            R.drawable.sonata1,
+            R.drawable.vento1
+    };
 
     public RecycleViewAdapter(List<Cars> carlist,Context context) {
         this.carsList=carlist;
@@ -35,27 +48,31 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         MyViewHolder holder = new MyViewHolder(view);
         return holder;
     }
+    
+public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    Cars car = carsList.get(position);
+    holder.tv_carName.setText(car.getName());
+    // Load image from URL using Glide with a placeholder
+    int randomIndex = new Random().nextInt(carImages.length);
+    int randomImageResource = carImages[randomIndex];
+    Glide.with(context)
+            .load(randomImageResource)
+            .placeholder(R.drawable.rent) // placeholder image resource
+            .into(holder.img_car);
 
+    holder.btn_book.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(context, BookingCarActivity.class);
+            intent.putExtra("carName", car.getName());
+            intent.putExtra("carImage", randomImageResource);
+            intent.putExtra("Model", car.getModel());
+            intent.putExtra("Milleage", car.getMilleage());
+            context.startActivity(intent);
+        }
+    });
+}
 
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.tv_carName.setText(carsList.get(position).getName());
-        Glide.with(this.context).load(carsList.get(position).getImageURL()).into(holder.img_car);
-        Cars car = carsList.get(position);
-        holder.tv_carName.setText(car.getName());
-        //holder.img_car.setImageURI(car.getImageURL());
-        holder.img_car.setImageURI(Uri.parse(car.getImageURL()));
-        holder.btn_book.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, BookingCarActivity.class);
-                intent.putExtra("carName", car.getName());
-                intent.putExtra("carImage", car.getImageURL());
-                intent.putExtra("Model", car.getModel());
-                intent.putExtra("Milleage", car.getMilleage());
-                context.startActivity(intent);
-            }
-        });
-    }
 
     @Override
     public int getItemCount() {
