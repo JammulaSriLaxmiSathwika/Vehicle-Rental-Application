@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0B0A0A">
-
+ 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -13,17 +13,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+ 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+ 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="729dp"
                 android:background="#FF9800">
-
+ 
                 <EditText
                     android:id="@+id/ET_model"
                     android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.399" />
-
+ 
                 <TextView
                     android:id="@+id/welcome_to_title"
                     android:layout_width="wrap_content"
@@ -52,8 +52,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-
+ 
+ 
                 <TextView
                     android:id="@+id/carName"
                     android:layout_width="48dp"
@@ -66,7 +66,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.161" />
-
+ 
                 <EditText
                     android:id="@+id/carNameET"
                     android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.195" />
-
+ 
                 <TextView
                     android:id="@+id/mileageText"
                     android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.26" />
-
+ 
                 <EditText
                     android:id="@+id/ET_km"
                     android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.295" />
-
+ 
                 <TextView
                     android:id="@+id/modelText"
                     android:layout_width="wrap_content"
@@ -124,9 +124,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.36" />
-
+ 
                 <EditText
-                    android:id="@+id/ET_model"
+                    android:id="@+id/ET"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="204dp"
@@ -139,7 +139,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.686" />
-
+ 
                 <Button
                     android:id="@+id/back"
                     android:layout_width="92dp"
@@ -150,7 +150,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.677"
                     app:layout_constraintStart_toStartOf="parent" />
-
+ 
                 <Button
                     android:id="@+id/addBTN"
                     android:layout_width="wrap_content"
@@ -163,12 +163,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.61" />
-
+ 
                 <TextView
                     android:id="@+id/imagetext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Image URL"
+                    android:text="car"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -176,10 +176,10 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.443" />
-
+ 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </ScrollView>
-
-
+</LinearLayout>
+</ScrollView>
+ 
+ 
 </androidx.constraintlayout.widget.ConstraintLayout>
